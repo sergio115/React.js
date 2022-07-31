@@ -4,8 +4,9 @@ export const FirstApp = ({ title, subTitle, name }) => {
 
 	return (
 		<>
-			<h1>{title}</h1>
+			<h1 data-testid="test-title"> {title} </h1>
 			{/* {JSON.stringify(newMessage)} */}
+			<p>{subTitle}</p>
 			<p>{subTitle}</p>
 			<p>{name}</p>
 		</>
@@ -20,5 +21,5 @@ FirstApp.propTypes = {
 FirstApp.defaultProps = {
 	name: 'Sergio Pérez',
 	subTitle: 'No hay subtitulo',
-	title: 'No hay titulo',
+	// title: 'No hay titulo',
 };

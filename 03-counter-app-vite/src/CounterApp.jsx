@@ -6,8 +6,9 @@ export const CounterApp = ({ value }) => {
 	const [counter, setCounter] = useState(value);
 
 	const handleAdd = () => {
+		// console.log(event)
 		setCounter(counter + 1);
-		setCounter(() => c + 1);
+		// setCounter((c) => c + 1);
 	};
 
 	const handleSubstract = () => setCounter(counter - 1);
@@ -20,11 +21,11 @@ export const CounterApp = ({ value }) => {
 
 			<button onClick={handleAdd}>+1</button>
 			<button onClick={handleSubstract}>-1</button>
-			<button onClick={handleReset}>Reset</button>
+			<button aria-label="btn-reset" onClick={handleReset}>Reset</button>
 		</>
 	);
 };
 
 CounterApp.propTypes = {
-	value: PropTypes.number,
+	value: PropTypes.number.isRequired,
 };
